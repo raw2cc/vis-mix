@@ -19,13 +19,12 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: node fetch_show.js
-        with:
-          env:
-            API_TOKEN: ${{ secrets.API_TOKEN }}
-            MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
-            MINIO_ENDPOINT: ${{ secrets.MINIO_ENDPOINT }}
-            MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}
-            MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
-            MONGODB_URI: ${{ secrets.MONGODB_URI }}
-            BASE_URL: ${{ secrets.BASE_URL }}
+        env:
+          API_TOKEN: ${{ secrets.API_TOKEN }}
+          MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
+          MINIO_ENDPOINT: ${{ secrets.MINIO_ENDPOINT }}
+          MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}
+          MONGODB_DB_NAME: ${{ secrets.MONGODB_DB_NAME }}
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          BASE_URL: ${{ secrets.BASE_URL }}
 
